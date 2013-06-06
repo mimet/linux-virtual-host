@@ -1,37 +1,38 @@
 linux-virtual-host
 ==================
 
-Creazione di host virtuali per lo sviluppo di siti su Linux
+Bash script that allow you to create multiple virtual hosts on a local *buntu system
 
 -----
 
-La seguente guida consente di configurare un host virtuale su un sistema Linux, per i siti contenuti nella cartella var/www di Apache.
-Data una cartella di nome NOME_HOST, per accedervi in locale, normalmente, bisogna digitare nel browser "localhost/NOME_HOST". 
-Seguendo la guida, basterà digitare semplicemente NOME_HOST.
+The script allows you to create multiple virtual hosts to suit your needs simply by invoking it from a terminal with root privileges and passing it the name of the host. 
+
+#####It was created, tested and running on Xubuntu 13.04 - Raring Ringtail
+
+----- 
 
 
-######Il tutto è stato testato e funzionante su Xubuntu 13.04
+##How to use
+1. Download and unzip in any folder
+2. Open a terminal emulator and change to the folder where you extracted the script
+3. When you're in the same folder that contains the script, type the following code:
 
------
+		sudo chmod a+rwx linux-virtual-host.sh
+		
+4. Now, type the following code:
 
-#####Alias dei nomi usati
+		sudo ./linux-virtual-host.sh HOST_NAME PRE_HOST OWNER_OF_HOST
+where 
 
-1. NOME_EDITOR_DI_TESTO: Nome dell'editor di testo di sistema (su Xubuntu è "mousepad")
-2. NOME_HOST: Nome della cartella del sito presente in /var/www
-3. NOME_HOST_COMPLETO: Nome della cartella del sito comprensiva di una stringa che lo precede. Non è necessario aggiungere alcuna stringa, ma per
-ragioni di pulizia, è preferibile inserire una stringa come ad esempio "dev." ad ogni sito, per cui, la mia NOME_HOST_COMPLETO in questo caso
-equivale a dev.NOME_HOST
-				 
-	
+- `HOST_NAME` is the name that you want to give to your new host/site. It can be any word. Please note that this will be also the name of the folder in `var/www`
+- `PRE_HOST` is a string that you can prepend to the name of host for greater order. If you don't type anything, for default it will be `dev.` Please also note that if you don't choose a `PRE_HOST` string, the `OWNER_NAME` of `HOST` will be set to `root`. If you like `dev.` as `PRE_HOST`, type it! 
+- `HOST_NAME` is the name of the owner of the folder `HOST` in `var/www`. If you don't choose an owner, it will be automatically `root` and then you have to change manually the permission to `HOST` folder in `var/www`
 
-##Procedura
+###Example
 
+Suppose you want to create a host named `pluto` that have ad `PRE_HOST` the string `is_dog`. After the first 3 points, you have to type in terminal
 
-
-####Creazione host
-
-Creare una cartella in /var/www di nome NOME_HOST che conterrà i file del sito.
-
+		sudo ./linux-virtual-host.sh pluto is_dog  
 
 
 ####Modifica file hosts
