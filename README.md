@@ -41,7 +41,8 @@ and go to address `PRE_HOST/HOST_NAME` for verify that it work.
 Suppose you want to create a host named `pluto` that have as `PRE_HOST` the string `is_dog` and your name is `mickey`. After the first 3 points, you have to type in terminal
 
 		sudo ./linux-virtual-host.sh pluto is_dog mickey
-If you now follow the point 5 of guide and go to address
+		
+If you now follow the point 5 of guide and open a browser going to address
 
 		is_dog.pluto
 		
