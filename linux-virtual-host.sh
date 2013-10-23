@@ -4,7 +4,7 @@
  #
  # @author  				Michele Meta <m.meta@hoob.it>
  # @link				http://hoob.it
- # @version				0.1
+ # @version				0.2
  # @operative system 			*buntu family
  #
  # This program is free software: you can redistribute it and/or modify
@@ -50,7 +50,7 @@ function authorize_host {
 	HOST=$1
 	COMPLETE_HOST=$2
 	TEXT="<VirtualHost *:80>\nDocumentRoot /var/www/"$HOST"\nServerName "$COMPLETE_HOST"\nServerAlias "$HOST"\n</VirtualHost>"
-	FILE="/etc/apache2/sites-available/"$HOST
+	FILE="/etc/apache2/sites-available/"$HOST".conf"
 
 	#Write the necessary stuff thar permits host to work
 	echo -e $TEXT >> $FILE
