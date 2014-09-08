@@ -2,8 +2,8 @@
 
  # Bash script that allow you to create multiple virtual hosts on a local *buntu system
  #
- # @author  				Michele Meta <m.meta@hoob.it>
- # @link				http://hoob.it
+ # @author  				Michele Meta <info@me.ta.it>
+ # @link				http://me.ta.it
  # @version				0.2
  # @operative system 			*buntu family
  #
