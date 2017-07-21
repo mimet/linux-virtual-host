@@ -7,14 +7,14 @@ Bash script that allow you to create multiple virtual hosts on a local *buntu sy
 
 The script allows you to create multiple virtual hosts to suit your needs simply by invoking it from a terminal with root privileges and passing it the name of the host. 
 
-#####It was created, tested and running on Xubuntu 13.04 - Raring Ringtail
+##### It was created, tested and running on Xubuntu 13.04 - Raring Ringtail
 
-#####This script will work only if you have LAMP installed!
+##### This script will work only if you have LAMP installed!
 
 ----- 
 
 
-##How to use
+## How to use
 1. Download and unzip in any folder
 2. Open a terminal emulator and change to the folder where you extracted the script
 3. When you're in the same folder that contains the script, type the following code:
@@ -36,7 +36,7 @@ where
 
 and go to address `PRE_HOST/HOST_NAME` for verify that it work.
 
-###Example
+### Example
 
 Suppose you want to create a host named `pluto` that have as `PRE_HOST` the string `is_dog` and your name is `mickey`. After the first 3 points, you have to type in terminal
 
